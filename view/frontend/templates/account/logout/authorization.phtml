@@ -1,0 +1,15 @@
+<?php
+/**
+ * Create by Skynix Team
+ */
+/** @var \Magento\Customer\Block\Account\AuthorizationLink $block */
+?>   
+<!-- ko scope: 'customer' -->
+	<!-- ko if: customer().fullname  -->
+        <li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?>">
+            <a href="<?= /* @escapeNotVerified */ $block->getUrl('customer/account/logout') ?>">
+                <?= $block->escapeHtml(__('Sign Out')) ?>
+            </a>
+        </li>
+    <!-- /ko -->
+<!-- /ko -->

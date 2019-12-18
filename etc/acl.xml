@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::system" title="System" translate="title" sortOrder="90">
+                    <resource id="Magento_Backend::tools" title="Tools" translate="title" sortOrder="50">
+                        <resource id="Magento_Backend::cache" title="Cache Management" translate="title"  sortOrder="10">
+                            <resource id="Magento_Backend::main_actions" title="Clean Cache Actions" translate="title" sortOrder="10">
+                                <resource id="Skynix_SXCloudflareAdapter::flush_cache_cloudflare" title="SX Flush Cache Cloudflare" translate="title" sortOrder="10" />
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Skynix_SXCloudflareAdapter::configuration" title="SX Cloudflare Module settings" />
+                        </resource>
+                    </resource>
+                </resource>
+                </resource>
+        </resources>
+    </acl>
+</config>

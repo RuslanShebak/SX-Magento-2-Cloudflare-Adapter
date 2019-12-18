@@ -1,0 +1,15 @@
+<?php
+/**
+ * Create by Skynix Team
+ */
+/** @var \Magento\Customer\Block\Account\RegisterLink $block */
+?>
+<!-- ko scope: 'customer' -->
+	<!-- ko ifnot: customer().fullname  -->
+        <li class="register-link">
+            <a href="<?= $block->getHref()?>">
+                <?= $block->escapeHtml($block->getLabel()) ?>
+            </a>
+        </li>
+    <!-- /ko -->
+<!-- /ko -->

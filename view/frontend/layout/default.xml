@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="authorization-link-login">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/authorization.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="authorization-link">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/logout/authorization.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="customer">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/customer.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="register-link">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/link/register.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>
