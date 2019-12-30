@@ -44,7 +44,7 @@ class CleanCloudflare extends Command
      */
     protected function configure()
     {
-        $this->setName( 'sx:clean-cloud-flare' )->setDescription( "Purge Cache Cloudflare" );
+        $this->setName('sx:clean-cloud-flare')->setDescription("Purge Cache Cloudflare");
     }
 
     /**
@@ -53,28 +53,28 @@ class CleanCloudflare extends Command
      * @param InputInterface $input
      * @param OutputInterface $output
      */
-    protected function execute( InputInterface $input, OutputInterface $output )
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
-        try{
+        try {
 
-            if( $this->data->getEnable() ) {
+            if ($this->data->getEnable()) {
 
-                $output->writeln( 'Purge Cache Cloud Flare' );
-                $output->writeln( 'Check account' );
+                $output->writeln('Purge Cache Cloud Flare');
+                $output->writeln('Check account');
 
                 $this->api->getAccounts();
 
-                $output->writeln( 'Get zones' );
+                $output->writeln('Get zones');
                 $zones = $this->api->getZones();
 
-                $output->writeln( 'Flush zones' );
+                $output->writeln('Flush zones');
                 $flush = $this->api->purgeCache($zones);
-                $output->writeln( $flush ? 'Success' : 'Error' );
+                $output->writeln($flush ? 'Success' : 'Error');
 
             }
 
         } catch (\Exception $e) {
-            $output->writeln( $e->getMessage() );
+            $output->writeln($e->getMessage());
         }
     }
 }

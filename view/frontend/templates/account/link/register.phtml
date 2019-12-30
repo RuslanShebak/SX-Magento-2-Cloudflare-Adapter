@@ -5,9 +5,9 @@
 /** @var \Magento\Customer\Block\Account\RegisterLink $block */
 ?>
 <!-- ko scope: 'customer' -->
-	<!-- ko ifnot: customer().fullname  -->
+    <!-- ko ifnot: customer().fullname  -->
         <li class="register-link">
-            <a href="<?= $block->getHref()?>">
+            <a href="<?= /* @noEscape */ $block->getHref()?>">
                 <?= $block->escapeHtml($block->getLabel()) ?>
             </a>
         </li>

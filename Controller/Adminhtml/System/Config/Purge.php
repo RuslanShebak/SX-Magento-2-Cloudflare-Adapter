@@ -45,8 +45,7 @@ class Purge extends \Magento\Backend\Controller\Adminhtml\Cache implements HttpG
         PageFactory $resultPageFactory,
         Data $data,
         Api $api
-    )
-    {
+    ) {
         parent::__construct(
             $context,
             $cacheTypeList,
@@ -58,7 +57,6 @@ class Purge extends \Magento\Backend\Controller\Adminhtml\Cache implements HttpG
         $this->api = $api;
     }
 
-
     /**
      * @return \Magento\Backend\Model\View\Result\Redirect|\Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface
      */
@@ -66,7 +64,7 @@ class Purge extends \Magento\Backend\Controller\Adminhtml\Cache implements HttpG
     {
         $message = null;
         try {
-            if( $this->data->getEnable() ) {
+            if ($this->data->getEnable()) {
 
                 $this->api->getAccounts();
                 $zones = $this->api->getZones();

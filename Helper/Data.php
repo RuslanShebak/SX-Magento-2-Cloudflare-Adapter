@@ -16,19 +16,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     const EMAIL     = 'sx_cloudflare_setting/general/email';
 
     /**
-     * Data constructor.
-     * @param Context $context
-     */
-    public function __construct(
-        Context $context
-    )
-    {
-        parent::__construct($context);
-    }
-
-    /**
      * Return module status
-     * 
+     *
      * @return mixed
      */
     public function getEnable()
@@ -41,7 +30,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Return api key
-     * 
+     *
      * @return mixed
      */
     public function getApiKey()
@@ -54,7 +43,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Return email
-     * 
+     *
      * @return mixed
      */
     public function getEmail()

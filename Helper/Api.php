@@ -39,7 +39,7 @@ class Api
      */
     private function getCurlHeaders()
     {
-        if( !$this->data->getEmail() || !$this->data->getApiKey()) {
+        if (!$this->data->getEmail() || !$this->data->getApiKey()) {
 
             throw new \Exception('Invalid Email or Api-Key');
         }
@@ -56,14 +56,14 @@ class Api
      */
     public function getAccounts()
     {
-        try{
+        try {
             $this->curl->setHeaders(
                 $this->getCurlHeaders()
             );
             $this->curl->get($this->data->getApiUrl('accounts'));
             $resultAccounts = json_decode($this->curl->getBody());
 
-            if( !$resultAccounts->success ) {
+            if (!$resultAccounts->success) {
                 throw new \Exception(implode(' ', $resultAccounts->messages));
             }
 
@@ -71,7 +71,7 @@ class Api
 
         } catch (\Exception $exception) {
 
-            throw new \Exception( $exception->getMessage() );
+            throw new \Exception($exception->getMessage());
         }
     }
 
@@ -80,10 +80,10 @@ class Api
      * @return array
      * @throws \Exception
      */
-    private function getAccountsData( $resultAccounts )
+    private function getAccountsData($resultAccounts)
     {
         $accounts = $resultAccounts->result;
-        if( empty($accounts) ) {
+        if (empty($accounts)) {
 
             throw new \Exception('There is no any account');
         }
@@ -106,16 +106,14 @@ class Api
      */
     public function getZones()
     {
-        try{
+        try {
             $this->curl->setHeaders(
-
                 $this->getCurlHeaders()
-
             );
             $this->curl->get($this->data->getApiUrl('zones'));
             $result = json_decode($this->curl->getBody());
 
-            if( !$result->success ) {
+            if (!$result->success) {
                 throw new \Exception(implode(' ', $result->messages));
             }
             $zonesIds = $this->getZonesIds($result);
@@ -123,7 +121,7 @@ class Api
 
         } catch (\Exception $exception) {
 
-            throw new \Exception( $exception->getMessage() );
+            throw new \Exception($exception->getMessage());
         }
     }
 
@@ -132,10 +130,10 @@ class Api
      * @return array
      * @throws \Exception
      */
-    private function getZonesIds( $zonesData )
+    private function getZonesIds($zonesData)
     {
         $resultZones = $zonesData->result;
-        if( empty($resultZones) ) {
+        if (empty($resultZones)) {
 
             throw new \Exception('There is no any zones');
         }
@@ -152,18 +150,21 @@ class Api
      * @return bool
      * @throws \Exception
      */
-    public function purgeCache( array $zones )
+    public function purgeCache(array $zones)
     {
         foreach ($zones as $zone) {
             $this->curl->setHeaders(
 
                 $this->getCurlHeaders()
             );
-            $this->curl->post($this->data->getApiUrl("zones/$zone/purge_cache"), json_encode(['purge_everything' => true]));
+            $this->curl->post(
+                $this->data->getApiUrl("zones/$zone/purge_cache"),
+                json_encode(['purge_everything' => true])
+            );
 
             $result = json_decode($this->curl->getBody());
 
-            if( !$result->success ) {
+            if (!$result->success) {
                 throw new \Exception(implode(' ', $result->messages));
             }
         }
