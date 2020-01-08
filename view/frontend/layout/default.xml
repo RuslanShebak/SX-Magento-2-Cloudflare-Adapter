@@ -3,22 +3,22 @@
     <body>
         <referenceBlock name="authorization-link-login">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/authorization.phtml</argument>
+                <argument name="template" xsi:type="string">Skynix_CloudflareSXAdapter::account/authorization.phtml</argument>
             </action>
         </referenceBlock>
         <referenceBlock name="authorization-link">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/logout/authorization.phtml</argument>
+                <argument name="template" xsi:type="string">Skynix_CloudflareSXAdapter::account/logout/authorization.phtml</argument>
             </action>
         </referenceBlock>
         <referenceBlock name="customer">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/customer.phtml</argument>
+                <argument name="template" xsi:type="string">Skynix_CloudflareSXAdapter::account/customer.phtml</argument>
             </action>
         </referenceBlock>
         <referenceBlock name="register-link">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Skynix_SXCloudflareAdapter::account/link/register.phtml</argument>
+                <argument name="template" xsi:type="string">Skynix_CloudflareSXAdapter::account/link/register.phtml</argument>
             </action>
         </referenceBlock>
     </body>

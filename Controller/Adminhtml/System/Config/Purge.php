@@ -4,12 +4,12 @@
  * Date: 31.10.19
  * Time: 21:30
  */
-namespace Skynix\SXCloudflareAdapter\Controller\Adminhtml\System\Config;
+namespace Skynix\CloudflareSXAdapter\Controller\Adminhtml\System\Config;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
-use Skynix\SXCloudflareAdapter\Helper\Data;
-use Skynix\SXCloudflareAdapter\Helper\Api;
+use Skynix\CloudflareSXAdapter\Helper\Data;
+use Skynix\CloudflareSXAdapter\Helper\Api;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Cache\Frontend\Pool;
 use Magento\Framework\App\Cache\StateInterface;

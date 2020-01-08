@@ -1,5 +1,5 @@
 {
-	"name" : "skynix/sxcloudflareadapter",
+	"name" : "skynix/cloudflare-sx-adapter",
 	"description" : "Cloudflare Adapter Magento 2",
 	"type" : "magento2-module",
 	"version" : "1.0.0",
@@ -7,15 +7,15 @@
 		"OSL-3.0",
 		"AFL-3.0"
 	],
-	"require": {
-        	"magento/framework": ">=102.0.0 <103"
-    	},
+	"require" : {
+		"magento/framework" : ">=102.0.0 <103"
+	},
 	"autoload" : {
 		"files" : [
 			"registration.php"
 		],
 		"psr-4" : {
-			"Skynix\\SXCloudflareAdapter\\" : ""
+			"Skynix\\CloudflareSXAdapter\\" : ""
 		}
 	}
 }

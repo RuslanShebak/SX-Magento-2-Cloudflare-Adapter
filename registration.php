@@ -4,6 +4,6 @@
  */
  \Magento\Framework\Component\ComponentRegistrar::register(
      \Magento\Framework\Component\ComponentRegistrar::MODULE,
-     'Skynix_SXCloudflareAdapter',
+     'Skynix_CloudflareSXAdapter',
      __DIR__
  );

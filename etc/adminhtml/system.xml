@@ -7,7 +7,7 @@
 	<section id="sx_cloudflare_setting" translate="label" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
 	    <label>Skynix Cloudflare Settings</label>
 	    <tab>sx_cloudflare</tab>
-	    <resource>Skynix_SXCloudflareAdapter::configuration</resource>
+	    <resource>Skynix_CloudflareSXAdapter::configuration</resource>
 	    <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
 			<label>Configuration</label>
 			<field id="module_enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
