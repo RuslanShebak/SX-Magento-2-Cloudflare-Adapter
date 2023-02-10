@@ -39,14 +39,13 @@ class Api
      */
     private function getCurlHeaders()
     {
-        if (!$this->data->getEmail() || !$this->data->getApiKey()) {
+        if (!$this->data->getToken()) {
 
-            throw new \Exception('Invalid Email or Api-Key');
+            throw new \Exception('Invalid Token');
         }
         return [
-            'Content-Type' => 'application/json',
-            'X-Auth-Email' => $this->data->getEmail(),
-            'X-Auth-Key' => $this->data->getApiKey()
+            'Authorization' => 'Bearer ' . $this->data->getToken(),
+            'Content-Type' => 'application/json'
         ];
     }
 
@@ -54,20 +53,20 @@ class Api
      * @return array
      * @throws \Exception
      */
-    public function getAccounts()
+    public function getAccount()
     {
         try {
             $this->curl->setHeaders(
                 $this->getCurlHeaders()
             );
-            $this->curl->get($this->data->getApiUrl('accounts'));
-            $resultAccounts = json_decode($this->curl->getBody());
+            $this->curl->get($this->data->getApiUrl('user/tokens/verify'));
+            $resultAccount = json_decode($this->curl->getBody());
 
-            if (!$resultAccounts->success) {
-                throw new \Exception(implode(' ', $resultAccounts->messages));
+            if (!$resultAccount->success) {
+                throw new \Exception(implode(' ', $resultAccount->messages));
             }
 
-            return $this->getAccountsData($resultAccounts);
+            return $this->getAccountData($resultAccount);
 
         } catch (\Exception $exception) {
 
@@ -76,31 +75,27 @@ class Api
     }
 
     /**
-     * @param $resultAccounts
+     * @param $resultAccount
      * @return array
      * @throws \Exception
      */
-    private function getAccountsData($resultAccounts)
+    private function getAccountData($resultAccount)
     {
-        $accounts = $resultAccounts->result;
-        if (empty($accounts)) {
+        $account = $resultAccount->result;
+        if (empty($account)) {
 
             throw new \Exception('There is no any account');
         }
 
-        $dataAccounts = [];
-        foreach ($accounts as $account) {
-
-            $dataAccounts[] = [
-                'account.id' => $account->id,
-                'account.name' => $account->name
-            ];
-        }
-        return $dataAccounts;
+        $dataAccount[] = [
+            'account.id' => $account->id,
+            'account.status' => $account->status
+        ];
+        return $dataAccount;
     }
 
     /**
-     * @param array $accountsData
+     * @param array $accountData
      * @return array
      * @throws \Exception
      */

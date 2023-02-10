@@ -4,16 +4,15 @@
  */
 /** @var Magento\Customer\Block\Account\Customer $block */
 ?>
-<!-- ko scope: 'customer' -->
-    <li class="customer-welcome">
-        <span class="customer-name"
+<li class="customer-welcome">
+        <span class="customer-name huy"
               role="link"
               tabindex="0"
               data-mage-init='{"dropdown":{}}'
               data-toggle="dropdown"
-              data-trigger-keypress-button="true">
+              data-trigger-keypress-button="true"
+              data-bind="scope: 'customer'">
             <!-- ko if: customer().fullname  -->
-                <span data-bind="text: customer().fullname"></span>
                 <button type="button"
                         class="action switch"
                         tabindex="-1"
@@ -22,15 +21,17 @@
                 </button>
             <!-- /ko -->
         </span>
+    <!-- ko scope: 'customer' -->
         <!-- ko if: customer().fullname  -->
-            <?php if ($block->getChildHtml()):?>
-                <div class="customer-menu" data-target="dropdown">
-                    <?= $block->getChildHtml() ?>
-                </div>
-            <?php endif; ?>
+        <?php if ($block->getChildHtml()):?>
+            <div class="customer-menu" data-target="dropdown">
+                <?= $block->getChildHtml() ?>
+            </div>
+        <?php endif; ?>
         <!-- /ko -->
-    </li>
-<!-- /ko -->    
+    <!-- /ko -->
+</li>
+
 <script type="text/x-magento-init">
 {
     "*": {
