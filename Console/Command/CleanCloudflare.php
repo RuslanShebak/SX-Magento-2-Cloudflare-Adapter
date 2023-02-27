@@ -4,13 +4,13 @@
  * Date: 27.11.19
  * Time: 16:47
  */
-namespace SkynixLlc\CloudflareSXAdapter\Console\Command;
+namespace Skynix\CloudflareSXAdapter\Console\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use SkynixLlc\CloudflareSXAdapter\Helper\Data;
-use SkynixLlc\CloudflareSXAdapter\Helper\Api;
+use Skynix\CloudflareSXAdapter\Helper\Data;
+use Skynix\CloudflareSXAdapter\Helper\Api;
 
 class CleanCloudflare extends Command
 {

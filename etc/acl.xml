@@ -7,7 +7,7 @@
                     <resource id="Magento_Backend::tools" title="Tools" translate="title" sortOrder="50">
                         <resource id="Magento_Backend::cache" title="Cache Management" translate="title"  sortOrder="10">
                             <resource id="Magento_Backend::main_actions" title="Clean Cache Actions" translate="title" sortOrder="10">
-                                <resource id="SkynixLlc_CloudflareSXAdapter::flush_cache_cloudflare" title="SX Flush Cache Cloudflare" translate="title" sortOrder="10" />
+                                <resource id="Skynix_CloudflareSXAdapter::flush_cache_cloudflare" title="SX Flush Cache Cloudflare" translate="title" sortOrder="10" />
                             </resource>
                         </resource>
                     </resource>
@@ -15,7 +15,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="SkynixLlc_CloudflareSXAdapter::configuration" title="Cloudflare SX Module settings" />
+                            <resource id="Skynix_CloudflareSXAdapter::configuration" title="Cloudflare SX Module settings" />
                         </resource>
                     </resource>
                 </resource>

@@ -4,7 +4,7 @@
  * Date: 31.10.19
  * Time: 18:14
  */
-namespace SkynixLlc\CloudflareSXAdapter\Helper;
+namespace Skynix\CloudflareSXAdapter\Helper;
 
 use Magento\Framework\HTTP\Client\Curl;
 

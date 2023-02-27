@@ -4,7 +4,7 @@
  * Date: 29.10.19
  * Time: 15:38
  */
-namespace SkynixLlc\CloudflareSXAdapter\Helper;
+namespace Skynix\CloudflareSXAdapter\Helper;
 
 use Magento\Framework\App\Helper\Context;
 
