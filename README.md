@@ -1,4 +1,4 @@
-Version: 1.1.0
+Version: 1.1.2
 
 Functionality:
 Admin → Stores → Configuration → SX Cloudflare → Skynix Cloudflare Settings -> Cloudflare Token
