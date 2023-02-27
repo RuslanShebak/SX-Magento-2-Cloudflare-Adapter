@@ -14,11 +14,8 @@
 				<label>Status Module</label>
 				<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
 			</field>
-			<field id="api_key" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-				<label>API key</label>
-			</field>
-			<field id="email" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-				<label>Email</label>
+			<field id="token" translate="label comment" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Token</label>
 			</field>
 	    </group>
 	</section>

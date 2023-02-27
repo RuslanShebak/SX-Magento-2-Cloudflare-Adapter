@@ -10,10 +10,9 @@ use Magento\Framework\App\Helper\Context;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    const BASE_URL_CLOUDFLARE = 'https://api.cloudflare.com/client/v4/';
-    const STATUS    = 'sx_cloudflare_setting/general/module_enable';
-    const API_KEY   = 'sx_cloudflare_setting/general/api_key';
-    const EMAIL     = 'sx_cloudflare_setting/general/email';
+    const BASE_URL_CLOUDFLARE = "https://api.cloudflare.com/client/v4/";
+    const TOKEN   = 'sx_cloudflare_setting/general/token';
+    const STATUS  = 'sx_cloudflare_setting/general/module_enable';
 
     /**
      * Return module status
@@ -29,37 +28,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     }
 
     /**
-     * Return api key
+     * Return token
      *
      * @return mixed
      */
-    public function getApiKey()
+    public function getToken()
     {
         return $this->scopeConfig->getValue(
-            self::API_KEY,
+            self::TOKEN,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
 
     /**
-     * Return email
-     *
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->scopeConfig->getValue(
-            self::EMAIL,
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-        );
-    }
-
-    /**
-     * Get CLOUDFLARE API url
-     * @param null $api
+     *  Get CLOUDFLARE API url
+     * @param $api
      * @return string
      */
-    public function getApiUrl($api = null)
+    public function getApiUrl($api)
     {
         return self::BASE_URL_CLOUDFLARE . $api;
     }

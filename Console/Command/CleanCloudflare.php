@@ -62,7 +62,7 @@ class CleanCloudflare extends Command
                 $output->writeln('Purge Cache Cloud Flare');
                 $output->writeln('Check account');
 
-                $this->api->getAccounts();
+                $this->api->getAccount();
 
                 $output->writeln('Get zones');
                 $zones = $this->api->getZones();

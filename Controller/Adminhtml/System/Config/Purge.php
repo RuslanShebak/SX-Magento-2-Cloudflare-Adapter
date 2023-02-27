@@ -66,7 +66,7 @@ class Purge extends \Magento\Backend\Controller\Adminhtml\Cache implements HttpG
         try {
             if ($this->data->getEnable()) {
 
-                $this->api->getAccounts();
+                $this->api->getAccount();
                 $zones = $this->api->getZones();
                 $flush = $this->api->purgeCache($zones);
 
