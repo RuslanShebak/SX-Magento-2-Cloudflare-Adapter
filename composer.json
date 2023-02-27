@@ -1,5 +1,5 @@
 {
-	"name" : "skynix/cloudflare-sx-adapter",
+	"name" : "skynix-llc/cloudflare-sx-adapter",
 	"description" : "Cloudflare Adapter Magento 2",
 	"type" : "magento2-module",
 	"version" : "1.1.0",
