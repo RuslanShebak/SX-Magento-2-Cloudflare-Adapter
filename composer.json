@@ -2,7 +2,7 @@
 	"name" : "skynix-llc/cloudflare-sx-adapter",
 	"description" : "Cloudflare Adapter Magento 2",
 	"type" : "magento2-module",
-	"version" : "1.1.0",
+	"version" : "1.1.2",
 	"license" : [
 		"OSL-3.0",
 		"AFL-3.0"
@@ -15,7 +15,7 @@
 			"registration.php"
 		],
 		"psr-4" : {
-			"Skynix\\CloudflareSXAdapter\\" : ""
+			"SkynixLlc\\CloudflareSXAdapter\\" : ""
 		}
 	}
 }

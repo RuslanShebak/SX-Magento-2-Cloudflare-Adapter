@@ -4,7 +4,7 @@
  * Date: 27.11.19
  * Time: 17:15
  */
-namespace Skynix\CloudflareSXAdapter\Block\Backend;
+namespace SkynixLlc\CloudflareSXAdapter\Block\Backend;
 
 class Cache extends \Magento\Backend\Block\Widget\Grid\Container
 {
@@ -43,7 +43,7 @@ class Cache extends \Magento\Backend\Block\Widget\Grid\Container
             );
         }
 
-        if ($this->_authorization->isAllowed('Skynix_CloudflareSXAdapter::flush_cache_cloudflare')) {
+        if ($this->_authorization->isAllowed('SkynixLlc_CloudflareSXAdapter::flush_cache_cloudflare')) {
             $this->buttonList->add(
                 'purge_cloudflare',
                 [
